@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Login Page</title>
+</head>
+
+<body>
+    <h1>Login Page</h1>
+    <p>Please click the button below to log in with MetaMask:</p>
+    <button id="login-button">Login with MetaMask</button>
+    <script src="https://cdn.jsdelivr.net/npm/web3@1.6.0/dist/web3.min.js"></script>
+    <script>
+        window.addEventListener('load', async () => {
+            // Check if MetaMask is installed
+            if (typeof window.ethereum !== 'undefined') {
+                console.log('MetaMask is installed!');
+                const web3 = new Web3(window.ethereum);
+                try {
+                    // Request account access
+                    await window.ethereum.enable();
+                    console.log('User has logged in');
+                } catch (error) {
+                    console.error(error);
+                }
+            } else {
+                console.log('MetaMask is not installed');
+            }
+            const loginButton = document.getElementById('login-button');
+            loginButton.addEventListener('click', async () => {
+                // Check if MetaMask is installed
+                if (typeof window.ethereum !== 'undefined') {
+                    const accounts = await web3.eth.getAccounts();
+                    if (accounts.length === 0) {
+                        alert('Please login to MetaMask');
+                    } else {
+                        alert(`Logged in as ${accounts[0]}`);
+                        // Redirect to home page or perform any other actions needed after login
+                    }
+                } else {
+                    console.log('MetaMask is not installed');
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+truffle migrate --network goerli
+
+Compiling your contracts...
+===========================
+> Compiling .\contracts\MetaMaskInteraction.sol
+> Artifacts written to C:\Users\jojot\Desktop\test_app\Dapp_truffle\build\contracts
+> Compiled successfully using:
+   - solc: 0.8.3+commit.8d00100c.Emscripten.clang
+
+
+Starting migrations...
+======================
+> Network name:    'goerli'
+> Network id:      5
+> Block gas limit: 30000000 (0x1c9c380)
+
+
+2_deploy_contracts.js
+=====================
+
+   Deploying 'MetaMaskInteraction'
+   -------------------------------
+   > transaction hash:    0xcaeca3a308974b375663fcf8aea868b4697d955924a5b36ec7bbca351325f1e6
+   > Blocks: 0            Seconds: 8
+   > contract address:    0xfcFbc8d968Daae76942338250eEB0c01cb6ef801
+   > block number:        8787829
+   > block timestamp:     1680845676
+   > account:             0x31568D35F5649430c7B19c32e8b369FBdcF629f4
+   > balance:             1.793987903741881651
+   > gas used:            282991 (0x4516f)
+   > gas price:           268.168104898 gwei
+   > value sent:          0 ETH
+   > total cost:          0.075889160173189918 ETH
+
+   Pausing for 2 confirmations...
+
+   -------------------------------
+   > confirmation number: 1 (block: 8787830)
+   > confirmation number: 2 (block: 8787831)
+   > Saving artifacts
+   -------------------------------------
+   > Total cost:     0.075889160173189918 ETH
+
+Summary
+=======
+> Total deployments:   1
+> Final cost:          0.075889160173189918 ETH
